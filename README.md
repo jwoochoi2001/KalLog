@@ -1,5 +1,10 @@
 # 🔥 체중 감량 유산소 다이어트 앱
 
+📌 앱 아이콘
+
+<img src="https://github.com/jwoochoi2001/FinalProject/raw/main/assets/icon.png" width="120" alt="앱 아이콘" />
+
+
 ## 📱 프로젝트 개요
 
 본 앱은 **유산소 운동을 통한 체중 감량 보조**를 목적으로 개발된 Android 애플리케이션입니다. 사용자의 정보를 기반으로 **kcal 목표 소모량을 설정**하고, 일일 운동량에 따라 **현재 소모량을 기록 및 피드백**해줍니다.
