@@ -2,7 +2,7 @@
 
 📌 앱 아이콘
 
-<img src="https://github.com/jwoochoi2001/FinalProject/raw/main/assets/icon.png" width="120" alt="앱 아이콘" />
+<img src="https://github.com/jwoochoi2001/KalLog/blob/main/icon.png" width="120" alt="앱 아이콘" />
 
 
 ## 📱 프로젝트 개요
