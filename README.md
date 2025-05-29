@@ -1,1 +1,96 @@
-# KalLog
+# 🔥 체중 감량 유산소 다이어트 앱
+
+## 📱 프로젝트 개요
+
+본 앱은 **유산소 운동을 통한 체중 감량 보조**를 목적으로 개발된 Android 애플리케이션입니다. 사용자의 정보를 기반으로 **kcal 목표 소모량을 설정**하고, 일일 운동량에 따라 **현재 소모량을 기록 및 피드백**해줍니다.
+
+> ❗ 본 앱은 식단 관리는 포함하지 않으며, **유산소 운동만으로 체중 감량을 보조**하는 데 초점을 둡니다.
+
+---
+
+## 🧠 주요 기능
+
+### 1. 사용자 정보 기반 맞춤 목표 설정
+
+* 이름, 생년월일, 성별, 키, 현재 체중, 목표 체중 입력
+* 자동으로 **기초대사량(BMR)** 계산 (Mifflin-St Jeor 식 활용)
+* 감량 목표 체중과 기간을 기반으로 **일일 kcal 목표 소모량 설정**
+
+### 2. 운동 후 kcal 소모량 입력
+
+* 운동 종류, 시간, 체중 입력 시 자동으로 kcal 계산
+* 계산 방식: `소모 칼로리 = MET × 체중(kg) × 시간(h)`
+* 운동 예시: 걷기, 자전거, 달리기, 수영 등
+
+### 3. 일일 / 누적 소모 kcal 피드백
+
+* 홈 화면에 "오늘의 kcal", "누적 kcal" 표시
+* 1,500kcal 이상일 경우 목표 달성 메시지 표시
+* 목표 도달 시 CLEAR 화면으로 이동, 부족할 경우 응원 메시지 출력
+
+### 4. 개인정보 수정 및 초기화
+
+* 마이페이지에서 정보 확인 및 수정 가능
+* "개인정보 초기화" 버튼 클릭 시 SharedPreferences 초기화
+
+### 5. 자정 자동 초기화 기능
+
+* AlarmManager를 이용해 매일 00시에 `todayKcal` 값을 자동 리셋
+
+---
+
+## 🧮 kcal 계산 기준 및 출처
+
+### 1. 일일 kcal 목표 설정
+
+* **기초대사량(BMR)** 계산:
+
+  * 남성: `10 × 체중(kg) + 6.25 × 키(cm) - 5 × 나이 + 5`
+  * 여성: `10 × 체중(kg) + 6.25 × 키(cm) - 5 × 나이 - 161`
+* **감량 공식**: 1kg 감량 = 약 7,700 kcal 소모 필요
+* 예: 5kg 감량 목표 → 38,500 kcal / 기간(30일) = 일일 약 1,283 kcal
+
+### 2. 운동 kcal 계산에 사용된 MET 기준
+
+* **MET (Metabolic Equivalent of Task)** 는 활동 강도를 나타냄
+
+  * 걷기: 3.8 MET
+  * 자전거 타기: 7.5 MET
+  * 조깅: 8.0\~10.0 MET 등
+
+> 🔗 출처:
+>
+> * Harvard Medical School: [https://www.health.harvard.edu/diet-and-weight-loss/calories-burned-in-30-minutes-of-leisure-and-routine-activities](https://www.health.harvard.edu/diet-and-weight-loss/calories-burned-in-30-minutes-of-leisure-and-routine-activities)
+> * Compendium of Physical Activities: [https://sites.google.com/site/compendiumofphysicalactivities/](https://sites.google.com/site/compendiumofphysicalactivities/)
+
+---
+
+## ⚙️ 기술 스택
+
+* Kotlin (Android SDK)
+* Android Jetpack: Navigation Component, SharedPreferences
+* MPAndroidChart (그래프 시각화)
+* AlarmManager (자정 자동 초기화)
+* ConstraintLayout + CardView 기반 UI 구성
+
+---
+
+## 🚀 향후 개선 방향
+
+* 식단 입력 및 영양소 분석 기능 추가
+* 사용자 간 운동량 공유 기능
+* Firebase 또는 Room DB를 활용한 클라우드 백업
+
+---
+
+## 📷 시연 영상 및 시연 스크린샷
+
+* [발표 영상 링크](https://youtube.com/shorts/Wqbb6nNHen0?feature=share)
+* [시연 영상 링크](https://youtube.com/shorts/pLkIRvxroOY?feature=share)
+
+---
+
+## 👨‍💻 개발자
+
+* **최정우** – 한성대학교 안드로이드 프로그래밍 기말 프로젝트
+* 깃허브: [[https://github.com/FinMateHansung](https://github.com/FinMateHansung)]
