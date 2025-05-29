@@ -10,6 +10,11 @@
 본 앱은 **유산소 운동을 통한 체중 감량 보조**를 목적으로 개발된 Android 애플리케이션입니다. 사용자의 정보를 기반으로 **kcal 목표 소모량을 설정**하고, 일일 운동량에 따라 **현재 소모량을 기록 및 피드백**해줍니다.
 
 > ❗ 본 앱은 식단 관리는 포함하지 않으며, **유산소 운동만으로 체중 감량을 보조**하는 데 초점을 둡니다.
+> 
+> 설치 환경: Android 8.0 이상
+> 
+> 타겟 사용자: 체중 감량을 원하는 일반인, 헬스 초보자 등
+
 
 ---
 
@@ -77,6 +82,9 @@
 * MPAndroidChart (그래프 시각화)
 * AlarmManager (자정 자동 초기화)
 * ConstraintLayout + CardView 기반 UI 구성
+* Kotlin (Android SDK) → Kotlin 1.9.x
+* MPAndroidChart → MPAndroidChart v3.1.0
+
 
 ---
 
