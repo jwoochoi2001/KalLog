@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <!-- 홈 화면 -->
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.finalproject.HomeFragment"
+        android:label="홈">
+
+        <!-- ✅ Clear 화면으로 이동 -->
+        <action
+            android:id="@+id/action_homeFragment_to_clearFragment"
+            app:destination="@id/clearFragment" />
+
+        <!-- ✅ Fail 화면으로 이동 (리셋 버튼용) -->
+        <action
+            android:id="@+id/action_homeFragment_to_failFragment"
+            app:destination="@id/failFragment" />
+    </fragment>
+
+    <!-- 운동 화면 -->
+    <fragment
+        android:id="@+id/sports"
+        android:name="com.example.finalproject.ExerciseFragment"
+        android:label="운동" />
+
+    <!-- 기록지 화면 -->
+    <fragment
+        android:id="@+id/record"
+        android:name="com.example.finalproject.RecordFragment"
+        android:label="기록지" />
+
+    <!-- 마이페이지 화면 -->
+    <fragment
+        android:id="@+id/mypage"
+        android:name="com.example.finalproject.MypageFragment"
+        android:label="마이페이지">
+
+        <!-- 마이페이지 → 정보수정 -->
+        <action
+            android:id="@+id/action_mypage_to_information"
+            app:destination="@id/informationFragment" />
+    </fragment>
+
+    <!-- 개인정보 수정 화면 -->
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.finalproject.InformationFragment"
+        android:label="개인정보수정">
+
+        <!-- 정보수정 완료 → 마이페이지 -->
+        <action
+            android:id="@+id/action_informationFragment_to_mypageFragment"
+            app:destination="@id/mypage" />
+    </fragment>
+
+    <!-- 🎉 Clear 성공 화면 -->
+    <fragment
+        android:id="@+id/clearFragment"
+        android:name="com.example.finalproject.ClearFragment"
+        android:label="축하화면" />
+
+    <!-- ❌ Fail 실패 화면 -->
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="com.example.finalproject.FailFragment"
+        android:label="실패화면" />
+</navigation>

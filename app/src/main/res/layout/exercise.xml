@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/boxExerciseInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#142C8E"
+            app:strokeWidth="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="운동 선택"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp" />
+
+                <ImageView
+                    android:id="@+id/imageExercise"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/diet" />
+
+                <TextView
+                    android:id="@+id/textExerciseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="운동 이름"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/editExerciseTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="운동 시간 (분)"
+            android:minHeight="48dp"
+            android:inputType="number"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/boxExerciseInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnCalculateKcal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="계산하기"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#142C8E"
+            app:layout_constraintTop_toBottomOf="@id/editExerciseTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textKcalResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 소모 칼로리: 0 kcal"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculateKcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnSubmitExercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="입력하기"
+            android:backgroundTint="#142C8E"
+            app:layout_constraintTop_toBottomOf="@id/textKcalResult"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageKallog"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="kallog 이미지"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kallog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSubmitExercise" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

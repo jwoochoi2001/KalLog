@@ -1,0 +1,7 @@
+<!-- 홈화면 오늘의 소비 내역 -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#EAF0FF" />
+    <stroke android:width="3dp" android:color="#142C8E" />
+</shape>

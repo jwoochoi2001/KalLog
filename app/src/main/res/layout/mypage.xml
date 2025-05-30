@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textViewGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홍길동님, 안녕하세요!"
+            android:textColor="#111111"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile"
+                android:scaleType="centerCrop"
+                android:background="@drawable/mypage_profile_circle"
+                android:clipToOutline="true"
+                android:outlineProvider="background" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#6A5AE0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_top_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내 사전에 포기란 없다"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_slogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="죽을만큼 운동해도 결코, 죽지 않는다"
+                    android:textColor="#FFEB3B"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 개인정보"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름: "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="생년월일: "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="성별: "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="신장 (cm): "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="체중 (kg): "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="목표 체중 (kg): "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/goal_kcal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="목표 kcal: "
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인정보 수정하기"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#142C8E"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="2dp"
+            app:cornerRadius="12dp" />
+
+        <Button
+            android:id="@+id/buttonEditDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인정보 초기화"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="32dp"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</ScrollView>
