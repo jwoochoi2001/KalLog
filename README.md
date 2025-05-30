@@ -1,6 +1,7 @@
 # 🔥 체중 감량 유산소 다이어트 앱
 
 📌 앱 아이콘
+
 앱 이름 - KalLog
 
 <img src="https://github.com/jwoochoi2001/KalLog/blob/main/icon.png" width="120" alt="앱 아이콘" />
